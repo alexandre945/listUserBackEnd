@@ -3,9 +3,9 @@ const cors = require('cors');
 const app = express();
 const productsRouter = require('./src/routes/products');
 
-// Configurar CORS para permitir solicitações de http://localhost:3001
+// Configurar CORS para permitir solicitações do front que esta rodando na vercel
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'https://listadecompras-rho.vercel.app/'
 }));
 
 app.use(express.json());
