@@ -121,11 +121,13 @@
             .then(response => response.json())
             .then(data => {
 
-                
+                alert('Produto cadastrado com sucesso!');
                   //fechar o madal
-                
-                // console.log('Produto cadastrado:', data);
-                fetchAndRenderProducts(); // Recarrega a lista de produtos
+                  $('#exampleModal').modal('hide');
+                    // console.log('Produto cadastrado:', data);
+                    // Recarrega a lista de produtos
+                fetchAndRenderProducts(); 
+              
                 // Limpa o formulário
                 document.getElementById('productName').value = '';
                 document.getElementById('productQuantity').value = '';
@@ -133,8 +135,7 @@
             .catch((error) => {
                 console.error('Erro ao cadastrar produto:', error);
             });
-            $('#exampleModal').modal('hide');
-            alert('Produto cadstrado com sucesso!');
+            
         });
 
         // Carrega a lista de produtos ao carregar a página
