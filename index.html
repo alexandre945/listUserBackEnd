@@ -121,9 +121,9 @@
             .then(response => response.json())
             .then(data => {
 
-                alert('Produto cadstrado com sucesso!');
+                
                   //fechar o madal
-                $('#exampleModal').modal('hide');
+                
                 // console.log('Produto cadastrado:', data);
                 fetchAndRenderProducts(); // Recarrega a lista de produtos
                 // Limpa o formulário
@@ -133,6 +133,8 @@
             .catch((error) => {
                 console.error('Erro ao cadastrar produto:', error);
             });
+            $('#exampleModal').modal('hide');
+            alert('Produto cadstrado com sucesso!');
         });
 
         // Carrega a lista de produtos ao carregar a página
