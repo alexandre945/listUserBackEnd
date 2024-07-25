@@ -109,6 +109,8 @@
             const name = document.getElementById('productName').value;
             const quantity = document.getElementById('productQuantity').value;
 
+            //rota para cadstrar produto
+
             fetch('http://localhost:8080/api/products', {
                 method: 'POST',
                 headers: {
@@ -118,7 +120,11 @@
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Produto cadastrado:', data);
+
+                alert('Produto cadstrado com sucesso!');
+                  //fechar o madal
+                $('#productModal').modal('hide');
+                // console.log('Produto cadastrado:', data);
                 fetchAndRenderProducts(); // Recarrega a lista de produtos
                 // Limpa o formulário
                 document.getElementById('productName').value = '';
