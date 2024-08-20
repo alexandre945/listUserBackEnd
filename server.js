@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 
 // Configuração de CORS
 app.use(cors({
-  origin: 'https://listadecompras-rho.vercel.app', // URL do frontend
+  origin: process.env.FRONTEND_URL,// URL do frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'] // Cabeçalhos permitidos
 }));
